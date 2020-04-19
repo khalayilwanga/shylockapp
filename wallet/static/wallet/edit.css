@@ -1,0 +1,31 @@
+:root {
+  --main-green: #319728;
+  --dark-grey: #504c4c;
+  --light-grey: #a8a4a4;
+  --main-serif: "Zilla Slab", serif;
+  --accent-font: "Simonetta", cursive;
+  --header-font: "Arima Madurai", cursive;
+}
+button {
+  border: none;
+  padding: none;
+  font-family: inherit;
+  font-size: 100%;
+}
+.wallet_edit_add {
+  border: 1px solid red;
+  color: red;
+  background-color: inherit;
+  border-radius: 50%;
+}
+.wallet_edit_minus {
+  color: var(--main-green);
+  border-radius: 50%;
+  border: 1px solid var(--main-green);
+  background-color: inherit;
+  border-radius: 50%;
+}
+h1 {
+  border-bottom: 2px solid var(--main-green);
+  color: white;
+}

@@ -1,0 +1,36 @@
+.main_delete {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  color: white;
+  /* outline: 1px solid red; */
+  height: 70vh;
+  font-size: xx-large;
+}
+ul {
+  font-size: 20px;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--dark-grey);
+}
+li {
+  list-style-type: none;
+}
+h1 {
+  border-bottom: 2px solid var(--main-green);
+}
+.delete_buttons {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+  /* outline: 1px solid orange; */
+  width: 50vw;
+  align-items: center;
+  justify-content: center;
+  margin-right: auto;
+  margin-left: auto;
+}

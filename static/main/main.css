@@ -1,0 +1,133 @@
+/* font imports */
+@import url("https://fonts.googleapis.com/css?family=Arima+Madurai|Simonetta|Zilla+Slab&display=swap");
+
+:root {
+  --main-green: #319728;
+  --dark-grey: #504c4c;
+  --light-grey: #a8a4a4;
+  --main-serif: "Zilla Slab", serif;
+  --accent-font: "Simonetta", cursive;
+  --header-font: "Arima Madurai", cursive;
+}
+a {
+  color: black;
+}
+a:hover {
+  text-decoration: none;
+  color: black;
+}
+body {
+  font-family: var(--main-serif);
+  background-color: var(--light-grey);
+}
+/* * {
+  outline: 1px solid red;
+} */
+.main_container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: space-between;
+  align-items: center;
+}
+nav {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  width: 85vw;
+  justify-content: space-between;
+  color: var(--main-green);
+  font-size: 20px;
+}
+
+[data-icon="fa-solid:user-circle"] {
+  color: var(--main-green);
+  height: 25px;
+  width: 20px;
+}
+.main_small_links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.main_small_links li a {
+  color: var(--main-green);
+}
+.main_small_links li a:hover {
+  border-top: 3px solid white;
+  color: white;
+  transition: 0.1s;
+  text-decoration: none;
+}
+section {
+  color: white;
+  display: flex;
+  flex-direction: row;
+  width: 85vw;
+  justify-content: center;
+  /* outline: 3px solid blue; */
+  align-self: center;
+  justify-self: center;
+  transform: translateY(30px);
+}
+
+[data-icon="et:wallet"] {
+  width: 7rem;
+  height: 7rem;
+  color: var(--main-green);
+}
+.main_text {
+  color: white;
+  font-family: var(--header-font);
+  font-size: 100px;
+}
+.main_paragraph {
+  color: var(--dark-grey);
+  font-family: var(--accent-font);
+  font-size: 25px;
+  transform: translateY(-10px);
+}
+.main_links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 60vw;
+}
+.main_links_item {
+  background-color: var(--main-green);
+  color: white;
+  padding: 12px;
+  border-radius: 30px;
+}
+.main_links_item:hover {
+  background-color: white;
+  color: var(--main-green);
+  border: 1px solid var(--main-green);
+  transition: all 0.2s;
+}
+.main_sample {
+  font-size: 22px;
+  font-family: var(--accent-font);
+}
+.main_sample a {
+  color: var(--dark-grey);
+}
+.main_sample a:hover {
+  color: white;
+  transition: all 0.2s;
+  border-bottom: 3px solid var(--main-green);
+}
+div .footer p {
+  color: var(--dark-grey);
+  /* background-color: red; */
+}
+.developer {
+  /* color: red; */
+  color: var(--dark-grey);
+}
+.developer:hover {
+  /* color: red; */
+  transition: all 0.2s;
+  border-top: 3px solid var(--main-green);
+  color: var(--main-green);
+}

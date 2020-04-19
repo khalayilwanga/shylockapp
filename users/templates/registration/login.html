@@ -1,0 +1,35 @@
+{% extends "users/base.html"%} {%load crispy_forms_tags%} {%block content%}
+<div class="login_main">
+  <h1 style="color:#319728;border-bottom: 1px solid white;">Log in</h1>
+  <form method="POST">
+    {% csrf_token %}{{form|crispy}}
+
+    <button type="submit" class="btn btn-primary mt-4">Login</button>
+    <div class="register_here">
+      <small>
+        If you don't have an account. Register
+        <a href="{% url 'users-register'%}" class="register_link text-primary "
+          >here</a
+        ></small
+      >
+    </div>
+  </form>
+</div>
+<style>
+  a:hover {
+    color: none;
+  }
+  .register_here {
+    color: white;
+    margin-top: 1em;
+  }
+  .register_link {
+    color: #319728;
+  }
+  .register_link:hover {
+    border: 1px solid transparent;
+    border-bottom-color: white;
+  }
+</style>
+
+{% endblock %}

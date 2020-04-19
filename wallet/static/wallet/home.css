@@ -1,0 +1,68 @@
+.wallet_head {
+  border-bottom: 1px solid var(--main-green);
+}
+.wallet_heading {
+  color: var(--main-green);
+}
+[data-icon="ei:plus"] {
+  width: 29px;
+  font-weight: bolder;
+  height: 29px;
+
+  color: var(--main-green);
+}
+[data-icon="ei:plus"]:hover {
+  width: 35px;
+  height: 35px;
+  transition-delay: 0.3s;
+}
+.wallet_row:hover {
+  color: var(--dark-grey);
+  background-color: white;
+  transition: all 0.2s;
+}
+.wallet_edit_icon:hover {
+  color: var(--main-green);
+}
+.wallet_delete_icon:hover {
+  color: red;
+}
+.wallet_col {
+  width: 50px;
+  /* outline: 1px solid green; */
+}
+.else {
+  /* font-family: var(--accent-font); */
+  font-size: 30px;
+  font-weight: 200;
+  color: var(--main-green);
+}
+div.wallet_else {
+  display: flex;
+  flex-direction: row;
+}
+.smiley {
+  width: 40px;
+  height: 40px;
+  margin-left: 3px;
+}
+.home_addentry {
+  display: flex;
+  align-self: flex-start;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  /* outline: 1px solid orange; */
+}
+
+[data-icon="gridicons:add"] {
+  width: 5rem;
+  height: 2rem;
+  /* outline: 1px solid blue; */
+  margin-left: -20px;
+  color: var(--main-green);
+}
+[data-icon="gridicons:add"]:hover {
+  color: white;
+  transition: 0.3px;
+  /* outline: 1px solid orange; */
+}

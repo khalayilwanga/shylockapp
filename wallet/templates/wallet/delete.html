@@ -1,0 +1,31 @@
+{% extends "wallet/base.html"%}{%load static%} {%load crispy_forms_tags%}
+{%block content%}
+
+<section class="main_delete">
+  {% if object.type_choice == "D"%}
+  <h1 class="mb-5" style="transform: translateX(20px);">Delete a debtor</h1>
+  {% else%}
+  <h1 class="mb-5 " style="transform: translateX(20px);">Delete a creditor</h1>
+  {%endif%}
+  <form method="POST">
+    {% csrf_token %}
+    <ul>
+      <li>
+        Name: {{object.name}}
+      </li>
+      <li>
+        Amount: {{object.amount}}
+      </li>
+      <li>
+        Deadline: {{object.deadline|date:" d/n/Y" }}
+      </li>
+    </ul>
+    <div class="delete_buttons pl-4 mt-5">
+      <button type="submit" class="btn btn-danger mr-4 ">Yes, Delete</button>
+      <a href="{% url 'wallet-home' %}" class="btn btn-primary ">Cancel</a>
+    </div>
+  </form>
+</section>
+
+<link rel="stylesheet" href="{% static 'wallet/delete.css'%}" />
+{%endblock %}

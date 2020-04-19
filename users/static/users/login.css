@@ -1,0 +1,4 @@
+.login_heading {
+  color: var(--main-green);
+  border-bottom-color: 1px solid white;
+}

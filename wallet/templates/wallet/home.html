@@ -1,0 +1,137 @@
+{% extends "wallet/base.html"%} {%block content%} {%load static%}
+
+<div class="creditors">
+  <div class="home_addentry">
+    <a href="{% url 'wallet-addentry' %}"
+      ><span
+        class="iconify"
+        data-icon="gridicons:add"
+        width="15"
+        height="15"
+        data-inline="false"
+        title="Add entry(debtor/creditor)"
+      ></span
+    ></a>
+  </div>
+  <h1>
+    creditors
+  </h1>
+  <p class="wallet_tagline"># The people who you owe money</p>
+  {%if entries%}
+  <section>
+    <table class="table table-borderless ">
+      <thead class="wallet_head">
+        <tr>
+          <th scope="col" class="wallet_heading wallet_col">Name</th>
+          <th scope="col" class="wallet_heading wallet_col">Amount</th>
+          <th scope="col" class="wallet_heading wallet_col">Last updated</th>
+          <th scope="col" class="wallet_heading wallet_col">Deadline</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for entry in entries%} {%if entry.type_choice == "C"%}
+        <tr class="wallet_row">
+          <th scope="row" class="wallet_col">{{entry.name}}</th>
+          <td class="wallet_col">{{entry.amount}}</td>
+          <td class="wallet_col">
+            {{entry.last_updated|date:"SHORT_DATE_FORMAT"}}
+          </td>
+          <td class="wallet_col">
+            {{entry.deadline|date:"SHORT_DATE_FORMAT"}}
+          </td>
+          <td class="wallet_col">
+            <a href="{% url 'wallet-editentry' entry.id%}">
+              <span
+                class="iconify mr-2 wallet_edit_icon"
+                data-icon="feather:edit-2"
+                data-inline="false"
+              ></span>
+            </a>
+            <a href="{%url 'wallet-deleteentry' entry.id%}"
+              ><span
+                class="iconify wallet_delete_icon"
+                data-icon="si-glyph:delete"
+                data-inline="false"
+              ></span
+            ></a>
+          </td>
+        </tr>
+
+        {%endif%} {% endfor%}
+      </tbody>
+    </table>
+  </section>
+  {% else%}
+  <div class="wallet_else">
+    <h2 class="else">You have no creditors yet</h2>
+    <span
+      class="iconify smiley"
+      data-icon="fxemoji:blackmissingsmiley"
+      data-inline="false"
+    ></span>
+  </div>
+
+  {%endif%}
+</div>
+<div class="debtors mt-5">
+  <h1>
+    debtors
+  </h1>
+  <p class="wallet_tagline"># The people who owe you money</p>
+  {%if entries%}
+  <section>
+    <table class="table table-borderless ">
+      <thead class="wallet_head">
+        <tr>
+          <th scope="col" class="wallet_heading wallet_col">Name</th>
+          <th scope="col" class="wallet_heading wallet_col">Amount</th>
+          <th scope="col" class="wallet_heading wallet_col">Last updated</th>
+          <th scope="col" class="wallet_heading wallet_col">Deadline</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for entry in entries%} {%if entry.type_choice == "D"%}
+        <tr class="wallet_row">
+          <th scope="row" class="wallet_col">{{entry.name}}</th>
+          <td class="wallet_col">{{entry.amount}}</td>
+          <td class="wallet_col">
+            {{entry.last_updated|date:"SHORT_DATE_FORMAT"}}
+          </td>
+          <td class="wallet_col">
+            {{entry.deadline|date:"SHORT_DATE_FORMAT"}}
+          </td>
+          <td class="wallet_col">
+            <a href="{% url 'wallet-editentry' entry.id%}">
+              <span
+                class="iconify mr-2 wallet_edit_icon"
+                data-icon="feather:edit-2"
+                data-inline="false"
+              ></span>
+            </a>
+            <a href="{%url 'wallet-deleteentry' entry.id%}"
+              ><span
+                class="iconify wallet_delete_icon"
+                data-icon="si-glyph:delete"
+                data-inline="false"
+              ></span
+            ></a>
+          </td>
+        </tr>
+
+        {%endif%} {% endfor%}
+      </tbody>
+    </table>
+  </section>
+  {% else%}
+  <div class="wallet_else">
+    <h2 class="else">You have no debtors yet</h2>
+    <span
+      class="iconify smiley"
+      data-icon="fxemoji:blackmissingsmiley"
+      data-inline="false"
+    ></span>
+  </div>
+  {%endif%}
+</div>
+<link rel="stylesheet" href="{% static 'wallet/home.css'%}" />
+{%endblock %}

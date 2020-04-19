@@ -1,0 +1,28 @@
+:root {
+  --main-green: #319728;
+  --dark-grey: #504c4c;
+  --light-grey: #a8a4a4;
+  --main-serif: "Zilla Slab", serif;
+  --accent-font: "Simonetta", cursive;
+  --header-font: "Arima Madurai", cursive;
+}
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: var(--main-green);
+  opacity: 1; /* Firefox */
+  color: blue;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: var(--main-green);
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: var(--main-green);
+}
+h1 {
+  border-bottom: 2px solid var(--main-green);
+  color: white;
+}

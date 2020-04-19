@@ -1,0 +1,163 @@
+{% extends "wallet/base.html"%} {%block content%}
+{%load static%}
+<small style="color:white"> This is a sample wallet and isn't functional</small>
+<div class="creditors">
+  <div><a  href="#"><span
+    class="iconify"
+    data-icon="gridicons:add"
+    width="15"
+    height="15"
+    data-inline="false"
+    title="Add entry(debtor/creditor)"
+  ></span></a></div>
+  <h1  >creditors</h1>
+  <p class="wallet_tagline"># The people who you owe money</p>
+  
+  <section>
+    <table class="table table-borderless ">
+      <thead class="wallet_head">
+        <tr>
+          <th scope="col" class="wallet_heading">Name</th>
+          <th scope="col" class="wallet_heading">Amount</th>
+          <th scope="col" class="wallet_heading">Last updated</th>
+          <th scope="col" class="wallet_heading">Deadline</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="wallet_row">
+          <th scope="row" >Tru</th>
+          <td>500</td>
+          <td>5/5/2019</td>
+          <td>5/10/2020</td>
+          <td>
+            <span
+              class="iconify mr-2 wallet_edit_icon"
+              data-icon="feather:edit-2"
+              data-inline="false"
+            ></span
+            ><span
+              class="iconify wallet_delete_icon"
+              data-icon="si-glyph:delete"
+              data-inline="false"
+            ></span>
+          </td>
+        </tr>
+        <tr class="wallet_row">
+          <th scope="row">Lwanga</th>
+          <td>700</td>
+          <td>5/7/2019</td>
+          <td>2/10/2022</td>
+          <td>
+            <span
+              class="iconify mr-2 wallet_edit_icon"
+              data-icon="feather:edit-2"
+              data-inline="false"
+            ></span
+            ><span
+              class="iconify wallet_delete_icon"
+              data-icon="si-glyph:delete"
+              data-inline="false"
+            ></span>
+          </td>
+        </tr>
+        </tr>
+        <tr class="wallet_row">
+          <th scope="row">Khalayi</th>
+          <td>9000</td>
+          <td>8/5/2019</td>
+          <td>5/12/2021</td>
+          <td>
+            <span
+              class="iconify mr-2 wallet_edit_icon"
+              data-icon="feather:edit-2"
+              data-inline="false"
+            ></span
+            ><span
+              class="iconify wallet_delete_icon"
+              data-icon="si-glyph:delete"
+              data-inline="false"
+            ></span>
+          </td>
+        </tr>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</div>
+<div class="debtors mt-5">
+  <h1>debtors</h1>
+  <p class="wallet_tagline"># The people who owe you money</p>
+  <section>
+    <table class="table table-borderless ">
+      <thead class="wallet_head">
+        <tr>
+          <th scope="col" class="wallet_heading">Name</th>
+          <th scope="col" class="wallet_heading">Amount</th>
+          <th scope="col" class="wallet_heading">Last updated</th>
+          <th scope="col" class="wallet_heading">Deadline</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="wallet_row">
+          <th scope="row">Tru</th>
+          <td>500</td>
+          <td>5/5/2019</td>
+          <td>5/10/2020</td>
+          <td>
+            <span
+              class="iconify mr-2 wallet_edit_icon"
+              data-icon="feather:edit-2"
+              data-inline="false"
+            ></span
+            ><span
+              class="iconify wallet_delete_icon"
+              data-icon="si-glyph:delete"
+              data-inline="false"
+            ></span>
+          </td>
+        </tr>
+        </tr>
+        <tr class="wallet_row">
+          <th scope="row">Lwanga</th>
+          <td>700</td>
+          <td>5/7/2019</td>
+          <td>2/10/2022</td>
+          <td>
+            <span
+              class="iconify mr-2 wallet_edit_icon"
+              data-icon="feather:edit-2"
+              data-inline="false"
+            ></span
+            ><span
+              class="iconify wallet_delete_icon"
+              data-icon="si-glyph:delete"
+              data-inline="false"
+            ></span>
+          </td>
+        </tr>
+        </tr>
+        <tr class="wallet_row">
+          <th scope="row">Khalayi</th>
+          <td>9000</td>
+          <td>8/5/2019</td>
+          <td>5/12/2021</td>
+          <td>
+            <span
+              class="iconify mr-2 wallet_edit_icon"
+              data-icon="feather:edit-2"
+              data-inline="false"
+            ></span
+            ><span
+              class="iconify wallet_delete_icon"
+              data-icon="si-glyph:delete"
+              data-inline="false"
+            ></span>
+          </td>
+        </tr>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</div>
+<link rel="stylesheet" href="{% static 'wallet/home.css'%}" />
+{%endblock %}
