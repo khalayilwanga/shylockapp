@@ -44,4 +44,4 @@ def register(request):
 
     elif request.method == 'GET':
         form = UserRegistrationForm()
-        return render(request, "registration/register.HTML", {'form': form})
+        return render(request, "registration/register.html", {'form': form})
