@@ -37,7 +37,7 @@ def register(request):
         password = request.POST.get('password1')
         email = request.POST.get('email')
         CustomUser.objects.create_user(username, email, password)
-        messages.info(request, f'Successfully registered.Log in now!')
+        messages.info(request, f'Successfully registered. Log in now!')
         return redirect("/")
 
         # Redirect to a success page.
