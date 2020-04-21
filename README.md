@@ -1,6 +1,6 @@
 <span>
 
-<img src ="./wallet.svg">
+<img align="left" src ="./wallet.svg">
 
 ## Shylock
 
