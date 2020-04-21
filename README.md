@@ -1,5 +1,5 @@
 <span>
-![Alt text](./wallet.svg)
+
 <img src ="./wallet.svg">
 
 ## Shylock
