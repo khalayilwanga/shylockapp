@@ -1,4 +1,6 @@
-<span><img src ="https://github.com/khalayilwanga/shylockapp/wallet.svg">
+<span>
+![Alt text](./wallet.svg)
+<img src ="./wallet.svg">
 
 ## Shylock
 
